@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Artwork | Art by Pallavi's Daughter</title>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; background: #020617; color: #f9fafb; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; }
+    a { color: #93c5fd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1 { font-size: 1.7rem; margin-bottom: 4px; }
+    p { color: #d1d5db; }
+    .card { margin-top: 18px; background: #020617; border-radius: 16px; border: 1px solid #1f2937; padding: 18px 18px 10px; }
+    label { display: block; font-size: 0.9rem; margin-bottom: 4px; }
+    input[type="text"], textarea { width: 100%; padding: 8px 9px; border-radius: 8px; border: 1px solid #374151; background: #020617; color: #f9fafb; font-size: 0.9rem; box-sizing: border-box; }
+    input[type="file"] { margin-top: 4px; color: #e5e7eb; font-size: 0.9rem; }
+    textarea { min-height: 80px; resize: vertical; }
+    .hint { font-size: 0.8rem; color: #9ca3af; margin-top: 2px; }
+    .row { display: grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap: 10px; margin-top: 10px; }
+    button { margin-top: 14px; background: linear-gradient(135deg,#2563eb,#7c3aed); color: #fff; border: none; border-radius: 999px; padding: 9px 18px; font-size: 0.95rem; cursor: pointer; }
+    button:hover { opacity: 0.95; }
+    .note { margin-top: 16px; font-size: 0.8rem; color: #9ca3af; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a href="index.html">← Back to home</a>
+    <h1>Upload new artwork</h1>
+    <p>Use this page when you want to add new pieces to the portfolio. In a real setup, this form would connect to a service (like Google Drive, Notion, or an image host) to store uploads.</p>
+
+    <div class="card">
+      <form action="#" onsubmit="alert('Because this is a static demo, the upload doesn't actually save anywhere. A developer or no-code tool can connect this form to Google Drive, Cloudinary, or Airtable.'); return false;">
+        <label for="title">Artwork title</label>
+        <input id="title" name="title" type="text" placeholder="e.g., Summer Daydream" required />
+
+        <div class="row">
+          <div>
+            <label for="medium">Medium</label>
+            <input id="medium" name="medium" type="text" placeholder="Digital, watercolor, markers…" />
+          </div>
+          <div>
+            <label for="year">Year</label>
+            <input id="year" name="year" type="text" placeholder="2026" />
+          </div>
+        </div>
+
+        <label for="files" style="margin-top: 10px;">Artwork image files</label>
+        <input id="files" name="files" type="file" accept="image/*" multiple required />
+        <div class="hint">Select one or more finished images (JPG or PNG). For real hosting, connect this to Google Drive or another storage service.</div>
+
+        <label for="notes" style="margin-top: 10px;">Private notes (optional)</label>
+        <textarea id="notes" name="notes" placeholder="Where this piece should appear, any hashtags, pricing ideas, etc."></textarea>
+
+        <button type="submit">Simulate upload</button>
+      </form>
+    </div>
+
+    <p class="note">To make uploads actually save somewhere, you can recreate this form in a no-code tool like Tally, Google Forms, or Airtable Forms, then link to it from this page or replace this entire page with that form.</p>
+  </div>
+</body>
+</html>

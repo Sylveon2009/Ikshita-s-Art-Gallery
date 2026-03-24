@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commission Request | Art by Pallavi's Daughter</title>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; background: #020617; color: #f9fafb; }
+    .wrap { max-width: 780px; margin: 0 auto; padding: 24px 20px 40px; }
+    a { color: #93c5fd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1 { font-size: 1.7rem; margin-bottom: 4px; }
+    p { color: #d1d5db; }
+    .card { margin-top: 18px; background: #020617; border-radius: 16px; border: 1px solid #1f2937; padding: 18px 18px 14px; }
+    label { display: block; font-size: 0.9rem; margin-bottom: 4px; }
+    input[type="text"], input[type="email"], select, textarea { width: 100%; padding: 8px 9px; border-radius: 8px; border: 1px solid #374151; background: #020617; color: #f9fafb; font-size: 0.9rem; box-sizing: border-box; }
+    textarea { min-height: 110px; resize: vertical; }
+    .row { display: grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap: 10px; margin-top: 10px; }
+    .hint { font-size: 0.8rem; color: #9ca3af; margin-top: 2px; }
+    button { margin-top: 14px; background: linear-gradient(135deg,#2563eb,#7c3aed); color: #fff; border: none; border-radius: 999px; padding: 9px 18px; font-size: 0.95rem; cursor: pointer; }
+    button:hover { opacity: 0.95; }
+    .note { margin-top: 16px; font-size: 0.8rem; color: #9ca3af; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a href="index.html">← Back to home</a>
+    <h1>Commission request form</h1>
+    <p>Share what you have in mind. This request goes to a parent for review first. We will reply with availability, pricing, and next steps.</p>
+
+    <div class="card">
+      <form action="#" onsubmit="alert('In the live version, this form would send an email or save to a spreadsheet. For now, please recreate this in Tally, Google Forms, or another tool and link to it.'); return false;">
+        <h2 style="font-size: 1rem; margin-top: 0;">Your contact details</h2>
+        <div class="row">
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 10px;">
+          <div>
+            <label for="location">City / Country</label>
+            <input id="location" name="location" type="text" placeholder="e.g., Frisco, TX" />
+          </div>
+          <div>
+            <label for="deadline">Ideal deadline</label>
+            <input id="deadline" name="deadline" type="text" placeholder="e.g., May 20, 2026" />
+          </div>
+        </div>
+
+        <h2 style="font-size: 1rem; margin-top: 16px;">Artwork details</h2>
+        <label for="type">What are you looking for?</label>
+        <select id="type" name="type" required>
+          <option value="">Select an option</option>
+          <option>Character illustration</option>
+          <option>Pet portrait</option>
+          <option>Portrait of a person</option>
+          <option>Scene or background art</option>
+          <option>Other (describe below)</option>
+        </select>
+
+        <label for="style" style="margin-top: 8px;">Style preference</label>
+        <select id="style" name="style">
+          <option value="">Open to suggestions</option>
+          <option>Anime / manga-inspired</option>
+          <option>Cartoon / chibi</option>
+          <option>Semi-realistic</option>
+          <option>Minimal / graphic</option>
+        </select>
+
+        <label for="description" style="margin-top: 8px;">Describe your idea</label>
+        <textarea id="description" name="description" placeholder="Who or what should be in the artwork, colors, mood, poses, and any references you have."></textarea>
+        <div class="hint">You can mention links to reference images or Pinterest boards here.</div>
+
+        <div class="row" style="margin-top: 8px;">
+          <div>
+            <label for="budget">Approximate budget (USD)</label>
+            <input id="budget" name="budget" type="text" placeholder="$40–$100" />
+          </div>
+          <div>
+            <label for="usage">How will you use it?</label>
+            <select id="usage" name="usage">
+              <option>Personal gift / decor</option>
+              <option>Social media profile / header</option>
+              <option>Content (YouTube, Twitch, etc.)</option>
+              <option>Prints / merchandise</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="extras" style="margin-top: 8px;">Anything else we should know?</label>
+        <textarea id="extras" name="extras" placeholder="Deadlines, special instructions, or accessibility needs."></textarea>
+
+        <button type="submit">Submit request</button>
+      </form>
+    </div>
+
+    <p class="note">For a production-ready version, you can recreate this form in <strong>Tally</strong>, <strong>Google Forms</strong>, or <strong>Typeform</strong>, then link that form URL instead of this page so responses go straight to your email or a spreadsheet.</p>
+  </div>
+</body>
+</html>
